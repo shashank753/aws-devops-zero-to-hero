@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-
-# Stop the running container (if any)
-echo "Hi"
+ remove=$(sudo docker ps | awk 'NR > 1 {print $1}')
+  sudo docker stop $remove
+  sudo docker rm  $remove
